@@ -8,9 +8,12 @@ flask+jquery+bootstrap+mysql
 
 ## 效果
 
-![](F:\Python\Web\Flask\MoLittleVideo\static\imgs\r1.PNG)
+![](https://github.com/sheppyy/MoFlaskQA/blob/master/static/imgs/r1.PNG)
 
-![](F:\Python\Web\Flask\MoLittleVideo\static\imgs\r2.PNG)![](F:\Python\Web\Flask\MoLittleVideo\static\imgs\r3.PNG)![](F:\Python\Web\Flask\MoLittleVideo\static\imgs\r4.PNG)![](F:\Python\Web\Flask\MoLittleVideo\static\imgs\r5.PNG)
+![](https://github.com/sheppyy/MoFlaskQA/blob/master/static/imgs/r2.PNG)
+![](https://github.com/sheppyy/MoFlaskQA/blob/master/static/imgs/r3.PNG)
+![](https://github.com/sheppyy/MoFlaskQA/blob/master/static/imgs/r4.PNG)
+![](https://github.com/sheppyy/MoFlaskQA/blob/master/static/imgs/r5.PNG)
 
 
 
