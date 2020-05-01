@@ -1,0 +1,45 @@
+{% extends 'home/base.html' %}
+{% block title %}问答详情{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/detail.css') }}">
+{% endblock %}
+{% block main %}
+    <h3 class="me-title">{{ question.title }}</h3>
+    <p class="info">
+        <span class="author">作者：{{ question.author.username }}</span>
+        <span class="time">发布时间：{{ question.create_time }}</span>
+    </p>
+    <hr><br>
+    <p class="content">{{ question.content }}</p>
+    <br>
+    <hr>
+    <h4>评论：({{ total_comments }})</h4>
+    <br>
+    <form action="{{ url_for('qa.comment') }}" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="发表你的见解" name="content">
+            {#隐藏标签#}
+            <input type="hidden" name="question_id" value="{{ question.id }}">
+        </div>
+        <div class="form-group" style="text-align: right;">
+            <button type="submit" class="btn btn-primary">立即评论</button>
+        </div>
+    </form>
+    <ul class="comment-list">
+        {% for item in question.comments %}
+            <li>
+                <div class="user-info">
+                    <img class="avatar" src="{{ url_for('static', filename='imgs/head.png') }}" alt="">
+                    <span class="author">{{ item.author.username }}</span>
+                    <span class="create-time">{{ item.create_time }}</span>
+                </div>
+                <p class="comment-content">{{ item.content }}</p>
+                <p class="support-but">
+                    <span class="support" id="support">
+                        <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;(666)
+                    </span>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

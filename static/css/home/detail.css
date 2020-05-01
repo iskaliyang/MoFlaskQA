@@ -1,0 +1,44 @@
+.info{
+    text-align: center;
+    margin-top: 15px;
+}
+.author, .time{
+    font-weight: 500;
+    padding: 0px 5px;
+}
+.comment-list{
+    padding-left: 0;
+}
+.comment-list li{
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+.avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+.user-info{
+    font-size: 15px;
+    color: #9b9b9b;
+    line-height: 48px;
+}
+.user-info .author{
+    margin-left: 15px;
+}
+.user-info .create-time{
+    float: right;
+}
+.comment-content{
+    margin-left: 70px;
+}
+.support-but{
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+}
+.support-but .support{
+    padding-right: 20px;
+    cursor: pointer;
+}

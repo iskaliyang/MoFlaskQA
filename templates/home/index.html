@@ -1,0 +1,33 @@
+{#继承父模板  注意路径是从templates开始找#}
+{% extends 'home/base.html' %}
+
+{#注入标题#}
+{% block title %}首页{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/index.css') }}">
+{% endblock %}
+{#字模板主体#}
+{% block main %}
+    <ul class="question-list-group">
+        {% if questions %}
+            {% for item in questions %}
+                <li class="question-li">
+                    <div class="avatar-group">
+                        <img class="avatar" src="{{ url_for('static', filename='imgs/head.png') }}" alt="">
+                    </div>
+                    <div class="content-group">
+                        <p class="q-title"><a href="{{ url_for('qa.detail', question_id=item.id) }}">{{ item.title }}</a></p>
+                        <p class="q-content">{{ item.content }}</p>
+                        <div class="info">
+                            <span class="author">{{ item.author.username }}</span>|
+                            <span class="date-time">{{ item.create_time }}</span>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        {% else %}
+            <h5>这里什么也没有...</h5>
+        {% endif %}
+    </ul>
+{% endblock %}

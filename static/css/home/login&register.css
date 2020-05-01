@@ -1,0 +1,13 @@
+.form-inner{
+    width: 540px;
+    margin: 0px auto;
+}
+
+.errmsg{
+    width: 540px;
+    margin: 5px auto;
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+}

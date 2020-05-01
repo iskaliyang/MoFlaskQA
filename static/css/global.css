@@ -1,0 +1,21 @@
+*{
+    transition: 0.5s all;
+}
+
+@media (min-width: 1500px) {
+    .container {
+        width: 1500px !important;
+    }
+}
+.me-container{
+    min-height: 700px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 10px 0px;
+}
+.me-title{
+    font-weight: 900;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px 0px;
+}

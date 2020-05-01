@@ -1,0 +1,35 @@
+.question-list-group{
+    padding-left: 0px;
+}
+.question-list-group .question-li{
+    border-bottom: 1px solid #eee;
+    /*去除浮动*/
+    overflow: hidden;
+    padding: 15px 0px;
+}
+.avatar-group {
+    width: 48px;
+    float: left;
+    height: 100%;
+    margin-right: 15px;
+}
+
+.avatar-group .avatar {
+    width: 48px;
+    height: 48px;
+}
+
+.content-group {
+    float: left;
+    width: 1400px;
+}
+.q-title a{
+    color: #259;
+    font-weight: 900;
+}
+.info {
+    text-align: right;
+}
+.info .author{
+    margin-right: 10px;
+}

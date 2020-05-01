@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+
+{% block title %}登录{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/login&register.css') }}">
+{% endblock %}
+{% block main %}
+    <h3 class="me-title">登录</h3>
+    <form class="form-horizontal" action="{{ url_for('home.login') }}" method="post">
+        <div class="errmsg">{{ errmsg }}</div>
+        <div class="form-inner">
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input name="remember" type="checkbox"> 记住我（30天内自动登录）
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary btn-block">登录</button>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

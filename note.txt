@@ -1,0 +1,16 @@
+一、笔记
+    1 create_time = db.Column(db.DateTime, datetime.now)
+        datetime.datetime.now()：服务器首次运行的时间
+        datetime.datetime.now：模型每次创建的时间
+
+    2 flask中的g对象
+        2.1 什么是g对象
+            - 在flask中，有一个专门用来存储用户信息的g对象，g的全称的为global。
+            - g对象在一次请求中的所有的代码的地方，都是可以使用的。
+        2.2 g对象和session的区别
+            - session对象是可以跨request的，只要session还未失效，不同的request的请求会获取到同一个session。
+            - 请求一次就g对象就改变一次，或者重新赋值了一次。即每次发生请求都会创建一个新的g对象
+
+     3 函数执行顺序
+        3.1 before_request -> 视图函数 -> context_processor
+            钩子函数 -> 视图函数 -> 上下文处理器
